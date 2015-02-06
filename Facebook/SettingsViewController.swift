@@ -32,7 +32,23 @@ class SettingsViewController: UIViewController, UIActionSheetDelegate {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    func actionSheet(actionSheet: UIActionSheet!, clickedButtonAtIndex buttonIndex: Int){
+    // buttonIndex is 0 for Cancel
+    // buttonIndex ranges from 1-n for the other buttons.
+        if(buttonIndex == 0) {
+            
+            println("cancelled")
+            performSegueWithIdentifier("logoutSegue", sender: nil)
+        } else {
+            println("ok")
+        }
+    }
 
+    @IBAction func onLogoutButtonPressed(sender: AnyObject) {
+        var actionSheet = UIActionSheet(title: "Log Out", delegate: self, cancelButtonTitle: "Cancel", destructiveButtonTitle: "Log Out")
+        actionSheet.showInView(view)
+    }
     /*
     // MARK: - Navigation
 
