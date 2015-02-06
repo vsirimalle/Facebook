@@ -8,6 +8,6 @@ This is a sample prototype app built as part of iOS training class. It does the 
 * Does a signout flow with a confirmation sheet
 * 
 
-![Video Walkthrough](facebook-demo.gif)
+![Video Walkthrough](Facebook/facebook-demo.gif)
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
